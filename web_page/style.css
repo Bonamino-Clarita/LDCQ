@@ -169,3 +169,42 @@ td {
 .domain-table td:last-child {
   text-align: center;
 }
+
+.score,
+.box,
+.big-box {
+  padding: 0;
+}
+
+.score-input,
+.calc-input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  font-family: "Times New Roman", serif;
+  font-size: 22px;
+  text-align: center;
+}
+
+.score-input {
+  height: 48px;
+}
+
+.calc-input {
+  height: 58px;
+}
+
+.thick-input {
+  height: 70px;
+}
+
+.score-input:focus {
+  outline: 2px solid #000;
+  outline-offset: -2px;
+}
+
+.calc-input:focus {
+  outline: none;
+}

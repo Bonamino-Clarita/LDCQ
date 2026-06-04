@@ -162,7 +162,7 @@
                     <td class="num">1.</td>
                     <td>…maintain lucidity without waking up?</td>
                     <td class="score">
-                        <input class="score-input" type="text" name="q1">
+                        <input class="score-input domain-score" type="text" name="q1">
                     </td>
                 </tr>
 
@@ -170,7 +170,7 @@
                     <td class="num">2.</td>
                     <td>…remember a pre-set intention while lucid in a dream?</td>
                     <td class="score">
-                        <input class="score-input" type="text" name="q2">
+                        <input class="score-input domain-score" type="text" name="q2">
                     </td>
                 </tr>
 
@@ -178,7 +178,7 @@
                     <td class="num">3.</td>
                     <td>…prolong a lucid dream when it starts to fade or feel unstable?</td>
                     <td class="score">
-                        <input class="score-input" type="text" name="q3">
+                        <input class="score-input domain-score" type="text" name="q3">
                     </td>
                 </tr>
 
@@ -186,7 +186,7 @@
                     <td class="num">4.</td>
                     <td>…remain focused on a chosen goal or task without getting distracted?</td>
                     <td class="score">
-                        <input class="score-input" type="text" name="q4">
+                        <input class="score-input domain-score" type="text" name="q4">
                     </td>
                 </tr>
 
@@ -194,21 +194,22 @@
                     <td class="num">5.</td>
                     <td>…prevent losing lucidity or waking up before completing a desired action or intention?</td>
                     <td class="score">
-                        <input class="score-input" type="text" name="q5">
+                        <input class="score-input domain-score" type="text" name="q5">
                     </td>
                 </tr>
                 <tr>
                     <td class="num">6.</td>
-                    <td>…experience dream control without major distractions or instability (e.g., struggling to exert control, being distracted by the dream and dream characters)?</td>
+                    <td>…experience dream control without major distractions or instability (e.g., struggling to exert
+                        control, being distracted by the dream and dream characters)?</td>
                     <td class="score">
-                        <input class="score-input" type="text" name="q6">
+                        <input class="score-input domain-score" type="text" name="q6">
                     </td>
                 </tr>
                 <tr>
                     <td class="num">7.</td>
                     <td>…regain focus or control when distractions or instability occur?</td>
                     <td class="score">
-                        <input class="score-input" type="text" name="q7">
+                        <input class="score-input domain-score" type="text" name="q7">
                     </td>
                 </tr>
             </tbody>
@@ -227,7 +228,9 @@
                         Total Domain Score<br>
                         <em>Exclude the “N.A.” questions</em>
                     </td>
-                    <td class="box"></td>
+                    <td class="box">
+                        <input id="total-domain-score" class="calc-input" type="text" readonly>
+                    </td>
                 </tr>
 
                 <tr>
@@ -236,7 +239,9 @@
                         Number of Questions Answered<br>
                         <em>Exclude the “N.A.” questions</em>
                     </td>
-                    <td class="box"></td>
+                    <td class="box">
+                        <input id="questions-answered" class="calc-input" type="text" readonly>
+                    </td>
                 </tr>
 
                 <tr>
@@ -245,7 +250,9 @@
                         <strong>Own Cognition Dream Control Score</strong><br>
                         <em>Total Domain Score ÷ (No. Questions Answered x 4)</em>
                     </td>
-                    <td class="big-box"></td>
+                    <td class="big-box">
+                        <input id="control-score" class="calc-input thick-input" type="text" readonly>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -262,7 +269,9 @@
                     <td class="label">
                         Number of Questions NOT Marked as "N.A."<br>
                     </td>
-                    <td class="box"></td>
+                    <td class="box">
+                        <input id="non-na-count" class="calc-input" type="text" readonly>
+                    </td>
                 </tr>
 
                 <tr>
@@ -271,11 +280,14 @@
                         <strong>Own Cognition Dream Engagement Score</strong><br>
                         <em>No. of non-"N.A" questions ÷ 7</em>
                     </td>
-                    <td class="big-box"></td>
+                    <td class="big-box">
+                        <input id="engagement-score" class="calc-input thick-input" type="text" readonly>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
