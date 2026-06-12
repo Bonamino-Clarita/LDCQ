@@ -300,3 +300,27 @@ td {
   font-family: "Times New Roman", serif;
   font-size: 24px;
 }
+.pdf-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f2f2f2;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pdf-download:hover {
+  background: #e0e0e0;
+}
+
+.pdf-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.center {
+  text-align: center;
+}
