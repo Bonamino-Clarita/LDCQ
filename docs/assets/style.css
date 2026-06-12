@@ -324,3 +324,10 @@ td {
 .center {
   text-align: center;
 }
+
+.next-button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
