@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       questionsAnswered > 0 && totalQuestionsInDomain > 0
         ? questionsAnswered / totalQuestionsInDomain
         : "";
-        
+
     if (totalDomainScoreInput) {
       totalDomainScoreInput.value =
         questionsAnswered > 0 ? totalDomainScore : "";
@@ -281,6 +281,40 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .join(" ");
   }
+
+  function createResultsTable(data) {
+    const table = document.createElement("table");
+    table.className = "results-table";
+
+    const thead = document.createElement("thead");
+    thead.innerHTML = `
+    <tr>
+      <th>Domain</th>
+      <th>Engagement</th>
+      <th>Control</th>
+    </tr>
+  `;
+
+    const tbody = document.createElement("tbody");
+
+    data.forEach((item) => {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+      <td>${item.label}</td>
+      <td>${item.engagement.toFixed(2)}</td>
+      <td>${item.control.toFixed(2)}</td>
+    `;
+
+      tbody.appendChild(row);
+    });
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+
+    return table;
+  }
+
 
   function renderSpiderChart() {
     const container = document.getElementById("spider-chart");
@@ -456,6 +490,16 @@ document.addEventListener("DOMContentLoaded", () => {
       text.textContent = label;
       svg.appendChild(text);
     });
+
+    const chartWrapper = document.createElement("div");
+    chartWrapper.className = "chart-wrapper";
+
+    const resultsTable = createResultsTable(data);
+
+    chartWrapper.appendChild(svg);
+    chartWrapper.appendChild(resultsTable);
+
+    container.appendChild(chartWrapper);
 
     container.appendChild(svg);
   }
