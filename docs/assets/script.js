@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const width = 900;
     const height = 820;
     const centerX = width / 2;
-    const centerY = 470;
+    const centerY = 520;
     const radius = 220;
     const levels = 5;
 
